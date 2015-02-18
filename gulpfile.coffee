@@ -12,4 +12,4 @@ gulp.task "default", ["generate"]
 
 gulp.task "generate",
   console.log messages.generating
-  shell.task "playground #{sourceFolder} -d #{destinationFolder}", quiet: false
+  shell.task "playground #{sourceFolder} -d #{destinationFolder} -p ios", quiet: false
