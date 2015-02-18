@@ -5,3 +5,11 @@
 3. Run `gulp` in the command line to generate the playgrounds
 4. Commit and push
 5. Profit
+
+### Auto Generation
+
+If you watn the Playgrounds to be generated as soon as you save the source file, run:
+
+~~~shell
+gulp watch
+~~~

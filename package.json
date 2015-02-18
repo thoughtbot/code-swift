@@ -6,6 +6,8 @@
   "devDependencies": {
     "coffee-script": "^1.9.0",
     "gulp": "^3.8.11",
+    "gulp-cached": "^1.0.2",
+    "gulp-debug": "^2.0.0",
     "gulp-shell": "^0.3.0",
     "playground": "^0.7.0"
   },
