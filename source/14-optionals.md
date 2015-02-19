@@ -113,30 +113,6 @@ assigned to a new constant, which is then available inside the following
 curly-braces block. Note that the constant is scoped to only that block, and
 isn't available further down in the code.
 
-Yet another option exists as well. Optional contains a `map` method:
-~~~swift
-func greet5(name: String?) -> String {
-  return name.map { realString in 
-    "Hello, \(realString)"
-  } ?? "Hello, nobody"
-}
-greet5("Joe")
-greet5(nil)
-~~~
-The `map` variant has some nice features. Because the closure has a return
-value, which is either something or nil, it's chainable. By following up with
-`??` (which is equivalent to `?:` in C), we can follow up with a simple default
-value for dealing with nil. In fact, we can tighten that up even further:
-~~~swift
-func greet6(name: String?) -> String {
-  return name.map { "Hello, \($0)" } ?? "Hello, nobody"
-}
-greet6("Joe")
-greet6(nil)
-~~~
-There, we're making use of a closure shortcut we didn't mention earlier: Even if
-you don't specify names for the arguments that are passed into the closure, they
-are automatically populated into numeric dollar-fields, starting with `$0`. 
 
 Shortcuts around nil-checks
 -----
