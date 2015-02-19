@@ -13,9 +13,8 @@ Also built-in String, Array, Dictionary, Tuple, and Set types. (which we’ll ge
 
 Variables & Constants
 -----
-
 Use "var" to create a variable.
-Using "let" creates a constant. Can’t be mutated, can’t be reassigned.
+Using "let" creates a constant. Can’t be mutated, can’t be reassigned. 
 
 ~~~swift
 var firstName = "Bob"
@@ -24,13 +23,11 @@ firstName = "Fred"
 let lastName = "Dobbs"
 lastName = "Flintstone"
 ~~~
-
 Constant == Immutable
 -----
-
 In Swift, notions of "constant" and "immutable" are in lock-step.
-Immutability helps the compiler reason about your code, and therefore
-optimize it. Anyone familiar with functional programming will probably
+Immutability helps the compiler reason about your code, and therefore 
+optimize it. Anyone familiar with functional programming will probably 
 appreciate this.
 
 ~~~swift
@@ -62,7 +59,7 @@ Forcing types
 -----
 
 You can’t directly assign some things that would work fine
-in C. But you can force it, and type inference can help tighten up the
+in C. But you can force it, and type inference can help tighten up the 
 code in the end.
 
 ~~~swift

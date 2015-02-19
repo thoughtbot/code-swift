@@ -20,7 +20,6 @@ letterType("@")
 ~~~
 
 Each case can also contain a range.
-
 ~~~swift
 func amountDescription(countedThings: String, count: Int) -> String {
   let naturalCount: String

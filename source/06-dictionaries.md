@@ -1,7 +1,6 @@
 Dictionaries
 -----
 Dictionaries are also type-safe, and are created similarly to arrays.
-
 ~~~swift
 var d1 = [String : String]()
 var d2 = ["foo" : "FOO", "bar" : "BAR"]
