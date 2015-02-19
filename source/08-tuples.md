@@ -6,7 +6,7 @@ useful when creating a function that needs to return multiple values.
 ~~~swift
 var t = (23, 42, "foo")
 var i = t.0            // 23
-//t.2 = 100              // error!
+//t.2 = 100            // error!
 t.2 = "bar"            // (23, 42, "bar")
 ~~~
 Unlike arrays, objects in a tuple can be of different types. But when changing a

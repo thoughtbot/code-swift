@@ -1,6 +1,6 @@
 # Map, Filter, and Reduce
 
-### Map
+### Arrays
 
 The Swift standard library comes with a `map` implementation for the `Array` type. Using `map`, you can apply a function to every member of an array to get a new array containing values that conform to the return type of the applied function.
 
@@ -21,8 +21,6 @@ func halfSizeRect(rect: CGRect) -> CGRect {
 let resizedRects = rects.map { halfSizeRect($0) }
 ~~~
 
-### Filter
-
 When applied to arrays, `filter` allows you to create a new array by running every member of an existing array
 through a function that returns a boolean value.
 
@@ -34,11 +32,15 @@ func isSquare(rect: CGRect) -> Bool {
 let squareRects = rects.filter { isSquare($0) }
 ~~~
 
-### Reduce
-
 Just like its name implies, `reduce` allows you to reduce an array into a new value using a function that takes
 two arguments: an accumulator and a member of the array.
 
 ~~~swift
 let union = resizedRects.reduce(CGRect(), combine: CGRectUnion)
 ~~~
+
+### Optionals
+
+Swift also comes with an implementation of `map` for optionals.
+
+
