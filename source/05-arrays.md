@@ -1,10 +1,11 @@
 Arrays
 -----
-Arrays in Swift are type-safe. You can create an empty array by 
-specifying the type of its items in square brackets, followed by 
+Arrays in Swift are type-safe. You can create an empty array by
+specifying the type of its items in square brackets, followed by
 parens to call the array initializer.
 You can create a non-empty array just by listing its contents. The array type
 will be inferred by the compiler (in this case, it's an array of `String`s)
+
 ~~~swift
   var a1 = [String]()
   var a2 = ["How", "you", "doin'"]
@@ -33,6 +34,7 @@ don't have to specify a type for `name`.
 
 Map
 -----
+
 Another option is the `map` function. This works a lot like ruby, etc. `map` is
 mainly used to construct a new array from an existing array, rather than
 producing side-effects such as output.
@@ -54,21 +56,21 @@ producing side-effects such as output.
 and you never need to specify the type of the inner value (like `name` above).
 It looks like this:
 
-~~~
+~~~swift
     /// Return an `Array` containing the results of calling
     /// `transform(x)` on each element `x` of `self`
     func map<U>(transform: (T) -> U) -> [U]
 ~~~
 
 Filter
------
+------
 
 Along those same lines, an array can be `filter`ed to produce a new array
 containing just some of the original arrays values. Specifically, those values
 for which the block returns `true`. Here we are grabbing just the values of the
 array which match a specific name.
-~~~swift
 
+~~~swift
   // filter
   ["Simon", "Garfunkel"].filter { name in
       name == "Simon"
@@ -76,7 +78,8 @@ array which match a specific name.
 ~~~
 
 `filter` also uses generics. It looks like this:
-~~~
+
+~~~swift
     /// Return an `Array` containing the elements `x` of `self` for which
     /// `includeElement(x)` is `true`
     func filter(includeElement: (T) -> Bool) -> [T]
@@ -84,11 +87,12 @@ array which match a specific name.
 
 Reduce
 -----
+
 Yet another interesting array operation is `reduce`. If you've ever created a
 temporary variable to accumulate values while iterating over an array, `reduce`
 can save you a few steps.
-~~~swift
 
+~~~swift
   // reduce
   ["Simon", "Garfunkel"].reduce("") { combo, next in
       if combo == "" {
@@ -100,7 +104,8 @@ can save you a few steps.
 ~~~
 
 Once again, generics are at work here.
-~~~
+
+~~~swift
     /// Return the result of repeatedly calling `combine` with an
     /// accumulated value initialized to `initial` and each element of
     /// `self`, in turn, i.e. return

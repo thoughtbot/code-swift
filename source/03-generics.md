@@ -23,13 +23,12 @@ But, we can create a generic version that accepts any integer type:
   add(UInt8(23), UInt8(123)) // OK!
 ~~~
 
-With generics, we solved this by creating a new function that 
-declares a generic type, here called T, to be used for the parameters 
+With generics, we solved this by creating a new function that
+declares a generic type, here called T, to be used for the parameters
 and return value.
-In this case, we’re declaring that the type T can’t be just *anything*, it 
-has to be a type that conforms to the IntegerType protocol. (we’ll get to 
+In this case, we’re declaring that the type T can’t be just *anything*, it
+has to be a type that conforms to the IntegerType protocol. (we’ll get to
 protocols a little later).
-
 
 If you're familiar with how generics work in C# or other languages, or even
 templates in C++, this is pretty similar.

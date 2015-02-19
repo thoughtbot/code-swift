@@ -15,10 +15,9 @@ Calling functions looks a lot like it does in most other languages.
 ~~~
 Notice this pattern:
 
-~~~
+~~~swift
   (<list of param types>) -> <return type>
 ~~~
-
 
 Named Parameters
 -----
@@ -28,7 +27,6 @@ An exception: If you precede the parameter name with `#` then it must be
 included.
 
 ~~~swift
-
   func doThings(#thing: Int) -> String {
     return "Just a thing"
   }
@@ -51,13 +49,14 @@ Parameter names can also be used to distinguish between methods.
   doThings(23, 47)
   doThings(thing3:23, thing4:47)
 ~~~
+
 That calls the first `doThing()` function, since the arguments are integers.
 Note that it's perfectly OK to have multiple functions with the same name, as
 long as the signatures are different.
 
-
 Closures
 -----
+
 Creating a closure is very simple. Especially compared to blocks in
 Objective-C, which are basically equivalent.
 We create a closure, and call it just like a function.
@@ -69,8 +68,10 @@ We create a closure, and call it just like a function.
 
   add(23, 42)
 ~~~
+
 There's that pattern again:
-~~~
+
+~~~swift
   (<list of param types>) -> <return type>
 ~~~
 
@@ -83,7 +84,7 @@ in its defining scope.
   let doctorator = {(s: String) -> String in
     return prefix + s
   }
- 
+
   let drPepper = doctorator("Pepper")
 ~~~
 
@@ -96,11 +97,10 @@ placed *outside* the parentheses. This looks a lot like ruby. In general, it
 ends up looking something like this, where `fetch` takes a query and a
 completion handler:
 
-~~~
+~~~swift
   fetch(query) { result in
     println("I got result \(result)!")
   }
 ~~~
 
 We'll see some real examples of this later.
-
