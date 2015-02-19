@@ -67,7 +67,7 @@ code in the end.
 
 ~~~swift
   // Given:
-  var f = 23.5          // f is a Float
+  var f = 23.5          // f is a Double
 
   // This doesn’t even work:
   var i1 : Int = f      // error
