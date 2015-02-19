@@ -97,7 +97,7 @@ placed *outside* the parentheses. This looks a lot like ruby. In general, it
 ends up looking something like this, where `fetch` takes a query and a
 completion handler:
 
-~~~swift
+~~~
   fetch(query) { result in
     println("I got result \(result)!")
   }
